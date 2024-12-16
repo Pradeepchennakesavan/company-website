@@ -8,7 +8,7 @@ const Procedure = () => {
 
       <div className='flex flex-col  items-center justify-center pb-5'>
         <p className='poppins-semibold text-3xl sm:text-4xl mb-3 text-[#361263]'>How it works</p>
-        <p className='poppins-regular text-[18px] text-[#361263D9]'>Simplifying the <span className='poppins-bold'>XXXX</span> Experience</p>
+        <p className='poppins-regular text-center text-[18px] text-[#361263D9]'>Simplifying the <span className='poppins-bold'>XXXX</span> Experience</p>
       </div>
 
       <div className='flex flex-col w-full md:flex-row gap-6 pt-9'>

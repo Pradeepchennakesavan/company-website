@@ -27,9 +27,9 @@ const About = () => {
       <div className='flex flex-col items-center lg:w-[50%] gap-7 text-white w-full bg-[#714BFF] pb-20'>
         <img className='w-[198px] pt-14 pb-9' src={about} alt="" />
 
-        <p className='w- px-[4rem] pb-3 text-center poppins-regular text-base sm:text-xl leading-[28px]'>Embark on a digital commerce revolution with <span className='poppins-bold'>XXXX</span>. We infuse confidence into your online ventures, securing transactions, optimizing logistics, and ensuring unparalleled customer satisfaction</p>
+        <p className='w- px-[7rem] pb-3 text-center poppins-regular text-base sm:text-xl leading-[28px]'>Embark on a digital commerce revolution with <span className='poppins-bold'>XXXX</span>. We infuse confidence into your online ventures, securing transactions, optimizing logistics, and ensuring unparalleled customer satisfaction</p>
 
-        <p className='w-full px-[4rem] text-center poppins-regular text-base sm:text-xl leading-[28px]'>
+        <p className='w-full px-[7rem] text-center poppins-regular text-base sm:text-xl leading-[28px]'>
         From cart to door, <span className='poppins-bold'>XXXX</span> transforms challenges into opportunities, making your Ecommerce journey not just secure but extraordinary. Elevate your business with the <span className='poppins-bold'>XXXX</span> touch and navigate the Ecommerce landscape with confidence and innovation
         </p>
         

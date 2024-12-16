@@ -98,8 +98,8 @@ const CaseStudy = () => {
               </div>
               
               <div className="flex flex-col items-start mt-4">
-                <p className="font-semibold text-lg">{d.name}</p>
-                <p className="text-gray-600 text-base">{d.des}</p>
+                <p className="font-light text-xs text-[#361263] text-lg">{d.name}</p>
+                <p className="text-[#361263] poppins-medium  text-xl">{d.des}</p>
               </div>
             </div>
           ))}
