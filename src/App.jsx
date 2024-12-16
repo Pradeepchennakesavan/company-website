@@ -16,7 +16,7 @@ import SolutionHover from './components/SolutionHover'
 
 const App = () => {
   return (
-    <div className='px-[6vw]'>
+    <div className='px-4 sm: px-[6vw]  overflow-hidden '>
       <NavBar />
       <Hero />
       <Features />

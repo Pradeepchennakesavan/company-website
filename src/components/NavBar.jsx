@@ -1,41 +1,78 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from '../assets/Logo.png';
 import dropdown from '../assets/dropdown.png';
 import HoverDetails from './HoverDetails';
 import SolutionHover from './SolutionHover';
+import { IoMdMenu } from "react-icons/io";
+import { IoMdArrowBack } from "react-icons/io";
+
+
 
 const NavBar = () => {
+
+  const [visible, setVisible] = useState(false)
+
   return (
     <nav className='flex items-center justify-between py-3 w-full  border-b-2'>
-      <img className='cursor-pointer' src={Logo}  alt="" />
-      <div className="flex gap-[28px] text-[#361263] text-[15px] font-medium">
+      <img className='cursor-pointer w-28 sm:w-40' src={Logo}  alt="" />
+      <div className="hidden lg:flex gap-7 text-[#361263] text-sm sm:text-base font-medium">
         <div className="flex items-center cursor-pointer">
-          <p>Industries</p>
-          <img src={dropdown} alt="Dropdown Icon" className="h-4 w-4" />
+          <HoverDetails 
+            title={"Industies"}
+          />
         </div>
+
         <div className="flex items-center cursor-pointer">
           <HoverDetails 
             title={"Solution"}
             hoverComponent={SolutionHover}
           />
         </div>
+
         <div className="flex items-center cursor-pointer">
-          <p>Partners</p>
-          <img src={dropdown} alt="Dropdown Icon" className="h-4 w-4" />
+          <HoverDetails 
+            title={"Partners"}
+          />
         </div>
+
         <div className="flex items-center cursor-pointer">
-          <p>About Us</p>
-          <img src={dropdown} alt="Dropdown Icon" className="h-4 w-4" />
+          <HoverDetails 
+            title={"About Us"}
+          />
         </div>
-        <div className='flex items-center cursor-pointer pl-6'>
-          <p>Contact us</p>
+        <div className='flex items-center cursor-pointer '>
+          <a href="">Contact Us</a>
         </div>
       </div>
 
-      <button className='px-4 py-2 cursor-pointer text-1 text-[#FAFBFD] text-white font-medium bg-gradient-to-r from-[#724CFF] to-[#69D6F9] rounded-[95px]'>
-        Talk to an Expert
-      </button>
+      <div className='flex items-center '>
+        <button className='px-3 py-1 lg:px-4 lg:py-2 text-sm cursor-pointer text-[#FAFBFD] text-white font-medium bg-gradient-to-r from-[#724CFF] to-[#69D6F9] rounded-[95px]'>
+          Talk to an Expert
+        </button>
+        <IoMdMenu onClick={() => setVisible(true)} className='lg:hidden text-xl w-8 px'/>
+      </div>
 
+      {/* Side bar menu */}
+      {
+        visible && (
+          <div className={`absolute top-0 right-0 z-10 bottom-0 overflow-hidden text-[#361263] bg-white transition-all ${visible ? 'w-full': 'w-0'}`}>
+            <div  className='flex flex-col cursor-pointer'>
+                <div onClick={()=>setVisible(false)} className='flex items-center gap-4 p-3'>
+                    <IoMdArrowBack />
+                    <p>Back</p>
+                </div>
+
+                <div className='flex flex-col items-center justify-center gap-3'>
+                  <p><HoverDetails title={"Industies"}/></p>
+                  <p><HoverDetails title={"Solutions"} hoverComponent={SolutionHover}/></p>
+                  <p><HoverDetails title={"Parntners"}/></p>
+                  <p><HoverDetails title={"About Us"}/></p>
+                  <p><HoverDetails title={"Contact Us"}/></p>
+                </div>
+            </div>
+          </div>
+        )
+      }
     </nav>
   )
 }
